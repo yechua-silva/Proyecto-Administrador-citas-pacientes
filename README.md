@@ -1,2 +1,15 @@
-# Proyecto-Administrador-citas-pacientes
-Es un administrador de citas para veterinarios desarrollado como parte de mi aprendizaje en un curso de JavaScript. El proyecto incluye la funcionalidad de agregar citas, editarlas y validar campos. Es una oportunidad para poner en práctica el uso de clases y demás conceptos aprendidos en el curso.
+## Descripción 💰📅
+
+
+## Autor ✒️
+**Yechua Silva**
+
+* [LinkedIn](https://www.linkedin.com/in/yechua-silva/)
+
+## Ver ejemplo en vivo 
+- []()
+
+## Instalación 
+Este proyecto no necesita de instalación. Simplemente abre la carpeta o haz doble click en el .html
+  
+## Contratación
