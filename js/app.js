@@ -14,6 +14,14 @@ class Citas {
     constructor() {
         this.citas = [];
     }
+
+    agregarCita(cita) {
+        this.citas = [...this.citas, cita]
+
+        console.log(this.citas);
+    }
+
+
 }
 
 class UI {
@@ -74,7 +82,6 @@ function datosCitas(e) {
     citasObj[e.target.name] = e.target.value; // Los name de los inputs
     //citasObj.mascota = e.target.value = citasObj[e.target.name] = e.target.value; pero no sera necesario hacerlo con todos los input, ya que e.target.name es dinámico, toma el name
 
-    console.log(citasObj);
 }
 
 // Valida y agrega una nueva cita a la clase
@@ -89,4 +96,27 @@ function nuevaCita(e) {
         ui.imprimirAlerta('Todos los campos son obligatorios', 'error');
         return
     }
+
+    // General un id único
+    citasObj.id = Date.now();
+
+    // Creando una nueva cita
+    administrarCitas.agregarCita({...citasObj}) // Crea un copia
+
+    // Reiniciar objeto para la validación
+    reiniciarObjeto();
+
+    // Reiniciar formulario
+    formulario.reset();
+
+    // Mostrar el HTML de las citas
+}
+
+function reiniciarObjeto() {
+    citasObj.mascota = '';
+    citasObj.propietario = '';
+    citasObj.telefono = '';
+    citasObj.fecha = '';
+    citasObj.hora = '';
+    citasObj.sintomas = '';
 }
